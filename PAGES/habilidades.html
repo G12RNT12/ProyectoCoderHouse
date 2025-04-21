@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio Grace Magallanes</title>
+    <meta name="description" content="Portafolio profesional">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <link rel="stylesheet" href="../CSS/style.css">
+</head>
+<body>
+    <!--Estructura n°1-->
+    <header>
+        <nav class="navbar">
+            <button class="hamburger-btn" aria-label="Menú">
+                <span class="hamburger-icon"></span>
+            </button>
+            <div class="logo">G&M</div>
+            <ul class="menu">
+                <li><a href="../index.html" class="active">Home</a></li>
+                <li><a href="Acercademi.html">Acerca de mí</a></li>
+                <li><a href="habilidades.html">Habilidades</a></li>
+                <li><a href="portafolio.html">Portafolio</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="" class="btn-cv">Download CV</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!--Estructura n°2-->
+    <section class="skills">
+        <div class="skills-content">
+            <div class="skill-box ux-ui">
+                <h3>Diseño UX/UI</h3>
+                <p>Figma</p>
+                <p>Adobe XD</p>
+                <p>Framer</p>
+            </div>
+            <div class="skill-box frontend">
+                <h3>Desarrollo Frontend</h3>
+                <p>Lenguajes: HTML, CSS, JavaScript</p>
+                <p>Frameworks & Librerías: React, Angular, Vue.js</p>
+                <p>Tipado Avanzado: TypeScript</p>
+            </div>
+        </div>
+        <div class="skills-title">
+            <div class="about-image">
+                <img src="../IMAGENES/habilidades.png" alt="Acerca de mí">
+            </div>
+        </div>
+    </section>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburgerBtn = document.querySelector('.hamburger-btn');
+            const menu = document.querySelector('.menu');
+
+            hamburgerBtn.addEventListener('click', function() {
+                this.classList.toggle('active');
+                menu.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html> 

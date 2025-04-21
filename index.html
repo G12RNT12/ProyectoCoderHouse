@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio Grace Magallanes</title>
+    <meta name="description" content="Portafolio profesional de Grace Magallanes">
+    <meta name="keywords" content="Frontend, UX/UI, Diseño Web">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header con Navbar -->
+    <header>
+        <nav class="navbar">
+            <button class="hamburger-btn" aria-label="Menú">
+                <span class="hamburger-icon"></span>
+            </button>
+            <div class="logo">G&M</div>
+            <ul class="menu">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="PAGES/Acercademi.html">Acerca de mí</a></li>
+                <li><a href="PAGES/habilidades.html">Habilidades</a></li>
+                <li><a href="PAGES/portafolio.html">Portafolio</a></li>
+                <li><a href="PAGES/contacto.html">Contacto</a></li>
+                <li><a href="" class="btn-cv">Download CV</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sección Hero -->
+    <section class="hero">
+        <div class="hero-text">
+            <p>¡Hola! Soy Grace Magallanes</p>
+            <h1>Desarrollador Front end & Diseñador UX/UI</h1>
+            <p>Lima, Perú</p>
+            <a href="mailto:grace.magallanes.morales@gmail.com" class="contact-info">grace.magallanes.morales@gmail.com</a>
+            
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/grace-magallanes-morales-27a620215/" target="_blank"><img src="ICONS/Linkedin.svg" alt="LinkedIn"></a>
+                <a href="#"><img src="ICONS/Instagram.svg" alt="Instagram" target="_blank"></a>
+                <a href="#"><img src="ICONS/Github.svg" alt="Github" target="_blank"></a>
+            </div>
+        </div>
+        
+        <div class="hero-image">
+            <img src="IMAGENES/figuraReferencial.png" alt="Grace Magallanes">
+        </div> 
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Grace Magallanes. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburgerBtn = document.querySelector('.hamburger-btn');
+            const menu = document.querySelector('.menu');
+
+            hamburgerBtn.addEventListener('click', function() {
+                this.classList.toggle('active');
+                menu.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>
