@@ -1,0 +1,54 @@
+.form-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+  
+    @media (max-width: 767px) {
+      flex-direction: column;
+    }
+  
+    .btn {
+      flex: 1;
+      
+      &-submit {
+        background: $gradient-btn-cv;
+        
+        &:hover {
+          background: linear-gradient(
+            to right, 
+            darken(#6A5ACD, 5%), 
+            darken(#007BFF, 5%)
+          );
+        }
+      }
+  
+      &-cancel {
+        background: white;
+        color: $dark-gray;
+        border: 1px solid $medium-gray;
+  
+        &:hover {
+          background: $light-bg;
+        }
+      }
+    }
+  }
+  
+  // Estilo especial para checkbox personalizado
+  .checkbox-group {
+    .checkbox-label {
+      .checkmark {
+        transition: all 0.3s ease;
+        
+        &:after {
+          transition: opacity 0.3s ease;
+        }
+      }
+  
+      &:hover {
+        .checkmark {
+          border-color: $secondary-color;
+        }
+      }
+    }
+  }
