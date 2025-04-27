@@ -1,35 +1,65 @@
 @use 'variable';
 .por {
-    font-size: 4rem;
-    font-weight: 700;
-    margin-bottom: 10px;
-    text-align: center;
-    padding-bottom: 15px;
-  }
-  
-  .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    gap: 30px;
-    margin-top: 40px;
-  }
-  
-  .project-card {
-    background: white;
-    border-radius: 40px;
-    overflow: hidden;
-    box-shadow: $card-shadow;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    @include hover-effect;
-  
-    &-content {
-      padding: 25px;
-  
-      img {
-        width: 100%;
-      }
-    }
-  }
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  background: linear-gradient(180deg,rgba(0, 123, 255, 1) 0%, rgba(144, 124, 255, 1) 100%);
+  -webkit-background-clip: text;
+  text-align: center;
+  background-clip: text;
+  color: transparent;
+  padding-bottom: 15px;
+}
+
+.proyectFr {
+  font-size: 1.5rem;
+  margin-bottom: 40px;
+  color: var(--primary-color);
+  text-align: left;
+  font-weight: 600;
+  position: relative;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+/* Tarjetas de proyecto */
+.project-card {
+  background: white;
+  border-radius: 40px;
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.project-content {
+  padding: 25px;
+}
+
+.project-content img{
+  width: 100%;
+}
+
+.project-description {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  color: #555;
+}
+
   
   .tech-tags {
     display: flex;

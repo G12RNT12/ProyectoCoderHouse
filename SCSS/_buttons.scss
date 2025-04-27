@@ -1,6 +1,42 @@
 @use 'variable';
 // Botones base
 
+.hamburger-btn {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  order: 1; /* Coloca el botón hamburguesa a la izquierda */
+}
+
+.hamburger-icon {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #5a49c6;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.hamburger-icon::before,
+.hamburger-icon::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 3px;
+  background-color: #5a49c6;
+  transition: all 0.3s ease;
+}
+
+.hamburger-icon::before {
+  top: -8px;
+}
+
+.hamburger-icon::after {
+  top: 8px;
+}
+
 .about-buttons .btn-primary, .btn-secondary{
   border-radius: 20px;
   padding: 8px 26px;
@@ -119,42 +155,5 @@
     opacity: 0.6;
     cursor: not-allowed;
   }
-  @media (max-width: 767px) {
-  .hamburger-btn {
-    display: none;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0.5rem;
-    order: 1; /* Coloca el botón hamburguesa a la izquierda */
-}
 
-.hamburger-icon {
-    display: block;
-    width: 25px;
-    height: 3px;
-    background-color: #5a49c6;
-    position: relative;
-    transition: all 0.3s ease;
-}
-
-.hamburger-icon::before,
-.hamburger-icon::after {
-    content: '';
-    position: absolute;
-    width: 25px;
-    height: 3px;
-    background-color: #5a49c6;
-    transition: all 0.3s ease;
-}
-
-.hamburger-icon::before {
-    top: -8px;
-}
-
-.hamburger-icon::after {
-    top: 8px;
-}
-
-}
 }
