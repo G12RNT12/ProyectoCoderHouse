@@ -1,36 +1,188 @@
 @import 'variable';
 @import 'reset';
-@import 'buttons';
-@import 'hero';
-@import 'mixins';
 @import 'navbar';
-@import 'projects';
+@import 'hero';
 @import 'about';
 @import 'skills';
+@import 'projects';
 @import 'contact';
 @import 'footer';
-@import 'typography';
-@import 'forms';
-// Estilos globales
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: $section-padding;
+@import 'mixins';
+
+// Media Queries
+@media (min-width: 768px) {
+    .navbar {
+        flex-wrap: nowrap;
+        padding: 20px 8%;
+    }
+    
+    .menu {
+        width: auto;
+        margin-top: 0;
+        justify-content: flex-end;
+    }
+    
+    .btn-cv {
+        margin-top: 0;
+    }
+    
+    .hero {
+        flex-direction: row;
+        text-align: left;
+        padding: 60px 8%;
+    }
+    
+    .hero-text {
+        width: 50%;
+        margin-bottom: 0;
+    }
+    
+    .hero-text h1 {
+        font-size: 3rem;
+    }
+    
+    .social-icons {
+        justify-content: flex-start;
+    }
+    
+    .about {
+        flex-direction: row;
+        gap: 50px;
+    }
+    
+    .about-buttons {
+        flex-direction: row;
+    }
+    
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .form-buttons {
+        flex-direction: row;
+    }
 }
 
+@media (max-width: 767px) {
+    .navbar {
+        flex-wrap: wrap;
+        padding: 1rem;
 
-.social-icons {
-    margin-top: 20px;
-    display: flex;
-    gap: 20px;
-  
-    a img {
-      width: 40px;
-      height: 40px;
-      transition: transform 0.3s;
-  
-      &:hover {
-        transform: scale(1.1);
-      }
+        .hamburger-btn {
+            display: block;
+            order: 1;
+        }
+
+        .logo {
+            order: 2;
+            margin-left: auto;
+        }
+
+        .menu {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            order: 3;
+            margin-top: 1rem;
+            padding: 1rem 0;
+            background-color: rgba(144, 124, 255, 1);
+            border-radius: 5px;
+
+            &.active {
+                display: flex;
+            }
+
+            li {
+                margin: 0.5rem 0;
+                text-align: center;
+            }
+
+            a {
+                display: block;
+                padding: 0.8rem;
+                color: white;
+            }
+        }
     }
-  }
+
+    .hero {
+        flex-direction: column-reverse;
+        padding: 30px 5%;
+        text-align: center;
+
+        .hero-text {
+            width: 100%;
+        }
+
+        .hero-text h1 {
+            font-size: 2rem;
+            line-height: 1.2;
+        }
+
+        .hero-image {
+            height: 300px;
+            margin-bottom: 30px;
+        }
+    }
+
+    .about {
+        flex-direction: column;
+        margin: 30px auto;
+        gap: 20px;
+
+        .about-buttons {
+            flex-direction: column;
+        }
+    }
+
+    .skills {
+        flex-direction: column;
+        gap: 20px;
+
+        .skills-title {
+            margin-bottom: 20px;
+        }
+    }
+
+    .por {
+        font-size: 2rem;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-form {
+        padding: 0 10px;
+    }
+
+    .form-buttons {
+        flex-direction: column;
+
+        .btn {
+            width: 100%;
+        }
+    }
+
+    .social-icons{
+        text-align: center;
+    }
+
+    @media (max-width: 480px) {
+        .hero-text h1 {
+            font-size: 1.8rem;
+        }
+        
+        .skill-box {
+            padding: 15px;
+        }
+        
+        .project-card {
+            border-radius: 15px;
+        }
+
+        .social-icons{
+            text-align: center;
+        }
+    }
+}

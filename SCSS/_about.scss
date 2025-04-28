@@ -1,0 +1,82 @@
+@import 'variable';
+
+.about {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 20px;
+    gap: 50px;
+
+    .about-image {
+        flex: 1;
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 50px;
+            box-shadow: $card-shadow;
+        }
+    }
+
+    .about-text {
+        flex: 1;
+        max-width: 600px;
+        color: #333;
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+    }
+
+    .about-link {
+        display: block;
+        color: #069AFC;
+        text-decoration: none;
+        margin-top: 20px;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .about-buttons {
+        margin-top: 20px;
+        display: flex;
+        gap: 15px;
+    }
+}
+
+.btn-primary,
+.btn-secondary {
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    display: inline-block;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.btn-primary {
+    background: linear-gradient(to right, #6A5ACD, #007BFF);
+    color: white;
+
+    &:hover {
+        background: linear-gradient(to right, #5a49c6, #0056b3);
+    }
+}
+
+.btn-secondary {
+    background: white;
+    color: #007BFF;
+    border: 2px solid #007BFF;
+
+    &:hover {
+        background: #007BFF;
+        color: white;
+    }
+}

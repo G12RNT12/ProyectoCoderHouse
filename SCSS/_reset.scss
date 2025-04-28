@@ -1,0 +1,26 @@
+@use 'variable';
+
+:root {
+  --primary-color: #{$primary-color};
+  --secondary-color: #{$secondary-color};
+  --accent-color: #{$accent-color};
+  --text-color: #{$text-color};
+  --light-bg: #{$light-bg};
+  --card-shadow: #{$card-shadow};
+  --medium-gray: #{$medium-gray};
+  --dark-gray: #{$dark-gray};
+  --error-color: #{$error-color};
+  --success-color: #{$success-color};
+  --box-shadow: #{$box-shadow};
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  color: $text-color;
+}
