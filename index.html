@@ -3,56 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio Grace Magallanes</title>
-    <meta name="description" content="Portafolio profesional de Grace Magallanes">
-    <meta name="keywords" content="Frontend, UX/UI, Diseño Web">
-    <link rel="stylesheet" href="CSS/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Grace Magallanes - Desarrolladora Frontend y Diseñadora UX/UI en Lima</title>
+    <meta name="description" content="Portafolio profesional de Grace Magallanes, desarrolladora Frontend y diseñadora UX/UI con experiencia en creación de interfaces web modernas y centradas en el usuario.">
+    <meta name="keywords" content="desarrollador frontend, diseñador UX/UI, diseño web, desarrollo web, portafolio, Grace Magallanes, Lima, Perú">
+    <meta name="author" content="Grace Magallanes">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="Grace Magallanes - Desarrolladora Frontend y Diseñadora UX/UI">
+    <meta property="og:description" content="Portafolio profesional de Grace Magallanes, especialista en desarrollo Frontend y diseño de experiencias de usuario.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.tudominio.com">
+    <!-- Preload de CSS -->
+    <link rel="preload" href="CSS/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="CSS/style.css"></noscript>
+    
 </head>
 <body>
     <!-- Header con Navbar -->
-    <header>
-        <nav class="navbar">
-            <button class="hamburger-btn" aria-label="Menú">
+    <header role="banner">
+        <nav class="navbar" role="navigation" aria-label="Menú principal">
+            <button class="hamburger-btn" aria-label="Menú" aria-expanded="false" aria-controls="menu-principal">
                 <span class="hamburger-icon"></span>
             </button>
-            <div class="logo">G&M</div>
-            <ul class="menu">
-                <li><a href="#" class="active">Home</a></li>
+            <div class="logo" aria-label="Inicio">G&M</div>
+            <ul class="menu" id="menu-principal">
+                <li><a href="#" class="active" aria-current="page">Home</a></li>
                 <li><a href="PAGES/Acercademi.html">Acerca de mí</a></li>
                 <li><a href="PAGES/habilidades.html">Habilidades</a></li>
                 <li><a href="PAGES/portafolio.html">Portafolio</a></li>
                 <li><a href="PAGES/contacto.html">Contacto</a></li>
-                <li><a href="" class="btn-cv">Download CV</a></li>
+                <li><a href="#" class="btn-cv" download="CV-Grace-Magallanes.pdf">Download CV</a></li>
             </ul>
         </nav>
     </header>
 
     <!-- Sección Hero -->
-    <section class="hero">
-        <div class="hero-text">
-            <p>¡Hola! Soy Grace Magallanes</p>
-            <h1>Desarrollador Front end & Diseñador UX/UI</h1>
-            <p>Lima, Perú</p>
-            <a href="mailto:grace.magallanes.morales@gmail.com" class="contact-info">grace.magallanes.morales@gmail.com</a>
-            
-            <div class="social-icons">
-                <a href="https://www.linkedin.com/in/grace-magallanes-morales-27a620215/" target="_blank"><img src="ICONS/Linkedin.svg" alt="LinkedIn"></a>
-                <a href="#"><img src="ICONS/Instagram.svg" alt="Instagram" target="_blank"></a>
-                <a href="#"><img src="ICONS/Github.svg" alt="Github" target="_blank"></a>
+    <main role="main">
+        <section class="hero" aria-labelledby="hero-heading">
+            <div class="hero-text">
+                <p>¡Hola! Soy Grace Magallanes</p>
+                <h1 id="hero-heading">Desarrolladora Frontend & Diseñadora UX/UI</h1>
+                <p>Lima, Perú</p>
+                <a href="mailto:grace.magallanes.morales@gmail.com" class="contact-info">grace.magallanes.morales@gmail.com</a>
+                
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/grace-magallanes-morales-27a620215/" target="_blank" rel="noopener noreferrer" aria-label="Perfil de LinkedIn"><img src="ICONS/Linkedin.svg" alt="LinkedIn" width="32" height="32"></a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Perfil de Instagram"><img src="ICONS/Instagram.svg" alt="Instagram" width="32" height="32"></a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Perfil de GitHub"><img src="ICONS/Github.svg" alt="Github" width="32" height="32"></a>
+                </div>
             </div>
-        </div>
-        
-        <div class="hero-image">
-            <img src="IMAGENES/ImgPor.jpg" alt="Grace Magallanes">
-        </div> 
-    </section>
+            
+            <div class="hero-image">
+                <img src="IMAGENES/ImgPor.jpg" alt="Grace Magallanes, desarrolladora frontend y diseñadora UX/UI" width="400" height="500" loading="lazy">
+            </div> 
+        </section>
+    </main>
 
     <!-- Footer -->
-    <footer>
-        <p>© 2025 Grace Magallanes. Todos los derechos reservados.</p>
+    <footer role="contentinfo">
+        <p>© <span id="current-year">2025</span> Grace Magallanes. Todos los derechos reservados.</p>
     </footer>
 
     <script>
@@ -61,9 +70,13 @@
             const menu = document.querySelector('.menu');
 
             hamburgerBtn.addEventListener('click', function() {
-                this.classList.toggle('active');
+                const isExpanded = this.classList.toggle('active');
+                this.setAttribute('aria-expanded', isExpanded);
                 menu.classList.toggle('active');
             });
+            
+            // Actualizar año del copyright
+            document.getElementById('current-year').textContent = new Date().getFullYear();
         });
     </script>
 </body>
